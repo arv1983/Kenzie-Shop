@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addToCart, removeFromCart } from "../../store/modules/cart/actions";
+import { removeFromCart } from "../../store/modules/cart/actions";
 import { addToCartThunk } from "../../store/modules/cart/thunk";
 const Product = ({ product, isRemovable = false }) => {
   const dispatch = useDispatch();

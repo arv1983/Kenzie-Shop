@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../../store/modules/cart/actions";
-
+import { addToCartThunk } from "../../store/modules/cart/thunk";
 const Product = ({ product, isRemovable = false }) => {
   const dispatch = useDispatch();
 
@@ -13,7 +13,7 @@ const Product = ({ product, isRemovable = false }) => {
           Remover item do carrinho
         </button>
       ) : (
-        <button onClick={() => dispatch(addToCart(product))}>
+        <button onClick={() => dispatch(addToCartThunk(product))}>
           Adicionar item ao carrinho
         </button>
       )}
